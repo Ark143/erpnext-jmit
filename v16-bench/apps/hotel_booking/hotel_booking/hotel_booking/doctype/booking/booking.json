@@ -1,0 +1,110 @@
+{
+ "doctype": "DocType",
+ "name": "Booking",
+ "module": "Hotel Booking",
+ "issingle": 0,
+ "istable": 0,
+ "is_submittable": 1,
+ "quick_entry": 1,
+ "track_changes": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "fields": [
+  {
+   "label": "Guest",
+   "fieldname": "guest",
+   "fieldtype": "Link",
+   "options": "Guest",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "label": "Hotel",
+   "fieldname": "hotel",
+   "fieldtype": "Link",
+   "options": "Hotel",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "label": "Check In Date",
+   "fieldname": "check_in",
+   "fieldtype": "Date",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "label": "Check Out Date",
+   "fieldname": "check_out",
+   "fieldtype": "Date",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "label": "Rooms",
+   "fieldname": "rooms",
+   "fieldtype": "Table",
+   "options": "Booking Room"
+  },
+  {
+   "label": "Total Amount",
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "allow_on_submit": 1,
+   "in_list_view": 1
+  },
+  {
+   "label": "Advance Payment",
+   "fieldname": "advance_payment",
+   "fieldtype": "Currency",
+   "allow_on_submit": 1
+  },
+  {
+   "label": "Balance Due",
+   "fieldname": "balance_due",
+   "fieldtype": "Currency",
+   "allow_on_submit": 1
+  },
+  {
+   "label": "Payment Status",
+   "fieldname": "payment_status",
+   "fieldtype": "Select",
+   "options": "Unpaid\nPartially Paid\nPaid",
+   "default": "Unpaid",
+   "allow_on_submit": 1,
+   "in_list_view": 1
+  },
+  {
+   "label": "Status",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "options": "Draft\nConfirmed\nChecked In\nChecked Out\nCancelled",
+   "default": "Draft",
+   "allow_on_submit": 1,
+   "in_list_view": 1
+  },
+  {
+   "label": "Actual Check In",
+   "fieldname": "actual_checkin",
+   "fieldtype": "Datetime",
+   "allow_on_submit": 1
+  },
+  {
+   "label": "Actual Check Out",
+   "fieldname": "actual_checkout",
+   "fieldtype": "Datetime",
+   "allow_on_submit": 1
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1
+  }
+ ]
+}

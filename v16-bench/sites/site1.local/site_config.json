@@ -1,0 +1,8 @@
+{
+ "db_host": "localhost",
+ "db_name": "_16daa193b9110d7f",
+ "db_password": "postgres",
+ "db_port": 5432,
+ "db_type": "postgres",
+ "db_user": "postgres"
+}

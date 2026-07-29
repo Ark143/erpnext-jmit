@@ -1,0 +1,5 @@
+include MANIFEST.in
+include pyproject.toml
+include requirements.txt
+include README.md
+recursive-include hotel_booking *.py *.json *.js *.css *.html *.md *.csv

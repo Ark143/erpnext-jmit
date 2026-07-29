@@ -1,0 +1,27 @@
+# Virtual environments
+env/
+venv/
+.venv/
+**/env/
+**/venv/
+
+# Node modules & build outputs
+node_modules/
+**/node_modules/
+
+# Logs & Redis dumps
+logs/
+**/logs/
+*.log
+*.rdb
+*.pyc
+**/__pycache__/
+
+# Frappe runtime assets
+sites/assets/
+**/sites/assets/
+
+# OS / Editor temporary files
+.DS_Store
+*.swp
+*.tmp

@@ -1,0 +1,122 @@
+{
+ "doctype": "DocType",
+ "name": "Guest",
+ "module": "Hotel Booking",
+ "issingle": 0,
+ "istable": 0,
+ "is_submittable": 0,
+ "quick_entry": 1,
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "full_name",
+ "search_fields": "full_name, email, phone, id_type, id_number",
+ "name_case": "Title Case",
+ "document_type": "",
+ "engine": "InnoDB",
+ "fields": [
+  {
+   "label": "Full Name",
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "in_global_search": 1
+  },
+  {
+   "label": "Email",
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "options": "Email"
+  },
+  {
+   "label": "Phone",
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "in_list_view": 1
+  },
+  {
+   "label": "Mobile",
+   "fieldname": "mobile",
+   "fieldtype": "Data",
+   "in_list_view": 1
+  },
+  {
+   "label": "Identification",
+   "fieldname": "identification_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "label": "ID Type",
+   "fieldname": "id_type",
+   "fieldtype": "Select",
+   "options": "\nPassport\nNational ID\nDriver's License\nOther"
+  },
+  {
+   "label": "ID Number",
+   "fieldname": "id_number",
+   "fieldtype": "Data"
+  },
+  {
+   "label": "ID Expiry Date",
+   "fieldname": "id_expiry_date",
+   "fieldtype": "Date"
+  },
+  {
+   "label": "Address",
+   "fieldname": "address_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "label": "Address",
+   "fieldname": "address",
+   "fieldtype": "Small Text"
+  },
+  {
+   "label": "City",
+   "fieldname": "city",
+   "fieldtype": "Data"
+  },
+  {
+   "label": "Country",
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "options": "Country"
+  },
+  {
+   "label": "Nationality",
+   "fieldname": "nationality",
+   "fieldtype": "Link",
+   "options": "Country"
+  },
+  {
+   "label": "Preferences",
+   "fieldname": "preferences_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "label": "VIP Guest",
+   "fieldname": "vip",
+   "fieldtype": "Check"
+  },
+  {
+   "label": "Preferences",
+   "fieldname": "preferences",
+   "fieldtype": "Small Text",
+   "description": "Special preferences or requirements"
+  },
+  {
+   "label": "Notes",
+   "fieldname": "notes",
+   "fieldtype": "Text Editor"
+  }
+ ],
+ "permissions": [
+  {"role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
+  {"role": "Hotel Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
+  {"role": "Hotel User", "read": 1, "write": 1, "create": 1}
+ ]
+}

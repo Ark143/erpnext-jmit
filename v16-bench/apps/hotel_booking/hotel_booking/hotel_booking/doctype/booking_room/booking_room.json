@@ -1,0 +1,73 @@
+{
+ "doctype": "DocType",
+ "name": "Booking Room",
+ "module": "Hotel Booking",
+ "issingle": 0,
+ "istable": 1,
+ "is_submittable": 0,
+ "track_changes": 0,
+ "document_type": "",
+ "engine": "InnoDB",
+ "fields": [
+  {
+   "label": "Room",
+   "fieldname": "room",
+   "fieldtype": "Link",
+   "options": "Room",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "label": "Room Type",
+   "fieldname": "room_type",
+   "fieldtype": "Link",
+   "options": "Room Type",
+   "fetch_from": "room.room_type",
+   "read_only_depends_on": "eval:doc.room",
+   "in_list_view": 1
+  },
+  {
+   "label": "Hotel",
+   "fieldname": "hotel",
+   "fieldtype": "Link",
+   "options": "Hotel",
+   "fetch_from": "room.hotel",
+   "read_only_depends_on": "eval:doc.room"
+  },
+  {
+   "label": "Rate",
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "label": "Adults",
+   "fieldname": "adults",
+   "fieldtype": "Int",
+   "non_negative": 1,
+   "default": "1"
+  },
+  {
+   "label": "Children",
+   "fieldname": "children",
+   "fieldtype": "Int",
+   "non_negative": 1,
+   "default": "0"
+  },
+  {
+   "label": "Extra Beds",
+   "fieldname": "extra_beds",
+   "fieldtype": "Int",
+   "non_negative": 1,
+   "default": "0"
+  },
+  {
+   "label": "Amount",
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "read_only": 1,
+   "in_list_view": 1
+  }
+ ]
+}

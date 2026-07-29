@@ -1,0 +1,2 @@
+# Patches are executed in order when the app is updated
+# Format: hotel_booking.patches.v1_0.setup_default_room_types

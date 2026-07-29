@@ -1,0 +1,16 @@
+[project]
+name = "hotel_booking"
+version = "1.0.0"
+description = "Hotel Booking Module for ERPNext v16"
+authors = [{ name = "josem", email = "josem@example.com" }]
+requires-python = ">=3.10"
+dependencies = [
+    "frappe",
+]
+
+[build-system]
+requires = ["flit_core"]
+build-backend = "flit_core.buildapi"
+
+[project.entry-points."frappe.installable_apps"]
+hotel_booking = "hotel_booking"

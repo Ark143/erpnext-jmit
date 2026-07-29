@@ -1,0 +1,127 @@
+{
+ "doctype": "DocType",
+ "name": "Room Type",
+ "module": "Hotel Booking",
+ "issingle": 0,
+ "istable": 0,
+ "is_submittable": 0,
+ "quick_entry": 1,
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "room_type_name",
+ "search_fields": "room_type_name, hotel",
+ "name_case": "Title Case",
+ "document_type": "",
+ "engine": "InnoDB",
+ "fields": [
+  {
+   "label": "Room Type Name",
+   "fieldname": "room_type_name",
+   "fieldtype": "Data",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "label": "Hotel",
+   "fieldname": "hotel",
+   "fieldtype": "Link",
+   "options": "Hotel",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "label": "Room Type Code",
+   "fieldname": "room_type_code",
+   "fieldtype": "Data",
+   "unique": 1
+  },
+  {
+   "label": "Pricing",
+   "fieldname": "pricing_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "label": "Base Rate",
+   "fieldname": "base_rate",
+   "fieldtype": "Currency",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "label": "Weekend Rate",
+   "fieldname": "weekend_rate",
+   "fieldtype": "Currency",
+   "description": "Rate for Fri-Sun (leave 0 to use base rate)"
+  },
+  {
+   "label": "Extra Bed Rate",
+   "fieldname": "extra_bed_rate",
+   "fieldtype": "Currency",
+   "description": "Charge per extra bed"
+  },
+  {
+   "label": "Capacity & Description",
+   "fieldname": "capacity_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "label": "Max Adults",
+   "fieldname": "max_adults",
+   "fieldtype": "Int",
+   "non_negative": 1,
+   "default": "2"
+  },
+  {
+   "label": "Max Children",
+   "fieldname": "max_children",
+   "fieldtype": "Int",
+   "non_negative": 1,
+   "default": "1"
+  },
+  {
+   "label": "Max Extra Beds",
+   "fieldname": "max_extra_beds",
+   "fieldtype": "Int",
+   "non_negative": 1,
+   "default": "1"
+  },
+  {
+   "label": "Bed Type",
+   "fieldname": "bed_type",
+   "fieldtype": "Select",
+   "options": "\nSingle\nDouble\nQueen\nKing\nTwin"
+  },
+  {
+   "label": "Room Size (sq ft)",
+   "fieldname": "room_size",
+   "fieldtype": "Int",
+   "non_negative": 1
+  },
+  {
+   "label": "Description",
+   "fieldname": "description",
+   "fieldtype": "Text Editor"
+  },
+  {
+   "label": "Amenities",
+   "fieldname": "amenities",
+   "fieldtype": "Small Text"
+  },
+  {
+   "label": "Disabled",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "default": "0"
+  }
+ ],
+ "permissions": [
+  {"role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
+  {"role": "Hotel Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
+  {"role": "Hotel User", "read": 1}
+ ]
+}

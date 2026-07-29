@@ -1,0 +1,84 @@
+{
+ "doctype": "DocType",
+ "name": "Room",
+ "module": "Hotel Booking",
+ "issingle": 0,
+ "istable": 0,
+ "is_submittable": 0,
+ "quick_entry": 1,
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "room_number",
+ "search_fields": "room_number, hotel, room_type",
+ "name_case": "Title Case",
+ "document_type": "",
+ "engine": "InnoDB",
+ "fields": [
+  {
+   "label": "Room Number",
+   "fieldname": "room_number",
+   "fieldtype": "Data",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "in_global_search": 1
+  },
+  {
+   "label": "Hotel",
+   "fieldname": "hotel",
+   "fieldtype": "Link",
+   "options": "Hotel",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "label": "Room Type",
+   "fieldname": "room_type",
+   "fieldtype": "Link",
+   "options": "Room Type",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "label": "Floor",
+   "fieldname": "floor",
+   "fieldtype": "Data"
+  },
+  {
+   "label": "Status",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "options": "Available\nOccupied\nDirty\nOut of Order\nMaintenance\nReserved",
+   "default": "Available",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "label": "Phone Extension",
+   "fieldname": "phone_extension",
+   "fieldtype": "Data"
+  },
+  {
+   "label": "Notes",
+   "fieldname": "notes",
+   "fieldtype": "Small Text"
+  },
+  {
+   "label": "Disabled",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "default": "0"
+  }
+ ],
+ "permissions": [
+  {"role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
+  {"role": "Hotel Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
+  {"role": "Hotel User", "read": 1, "write": 1, "create": 1}
+ ]
+}
