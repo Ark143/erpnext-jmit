@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"type\":\"header\",\"data\":{\"text\":\"Hotel Booking Workspace\",\"level\":4}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Booking\"}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Rooms\"}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Guests\"}},{\"type\":\"card\",\"data\":{\"card_name\":\"Hotel Setup\"}},{\"type\":\"card\",\"data\":{\"card_name\":\"Reservations\"}}]",
+ "content": "[{\"type\":\"header\",\"data\":{\"text\":\"Hotel Booking Management\",\"level\":4}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Hotels\"}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Room Types\"}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Rooms\"}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Guests\"}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Bookings\"}},{\"type\":\"card\",\"data\":{\"card_name\":\"Hotel Setup\"}},{\"type\":\"card\",\"data\":{\"card_name\":\"Reservations & Operations\"}}]",
  "custom_blocks": [],
  "docstatus": 0,
  "doctype": "Workspace",
@@ -55,7 +55,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Reservations",
+   "label": "Reservations & Operations",
    "link_count": 0,
    "link_type": "DocType",
    "onboard": 0,
@@ -97,8 +97,15 @@
   {
    "color": "Blue",
    "doc_view": "",
-   "label": "New Booking",
-   "link_to": "Booking",
+   "label": "Hotels",
+   "link_to": "Hotel",
+   "type": "DocType"
+  },
+  {
+   "color": "Purple",
+   "doc_view": "",
+   "label": "Room Types",
+   "link_to": "Room Type",
    "type": "DocType"
   },
   {
@@ -113,6 +120,13 @@
    "doc_view": "",
    "label": "Guests",
    "link_to": "Guest",
+   "type": "DocType"
+  },
+  {
+   "color": "Red",
+   "doc_view": "",
+   "label": "Bookings",
+   "link_to": "Booking",
    "type": "DocType"
   }
  ],
